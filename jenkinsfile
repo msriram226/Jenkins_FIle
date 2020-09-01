@@ -12,7 +12,7 @@ stage('ContiniousTesting'){
     git 'https://github.com/selenium-saikrishna/TestingNew.git'
     sh label: '', script: 'echo "Testing Passed"'
 }
-stage('ContiniousDelivery'){
+stage('Continious_Delivery'){
     input submitter: 'Manager', message: 'Waiting for Approval from Delivery manager'
     sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/ScriptedPipeline/webapp/target/webapp.war ubuntu@172.31.35.69:/var/lib/tomcat8/webapps/prodenv.war'
 }
